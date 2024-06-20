@@ -5,10 +5,11 @@ import './style.css';
 import {
   create,
   NButton,
-  NIcon
+  NIcon,
+  NInput,
 } from 'naive-ui'
 
 const naive = create({
-  components: [NButton, NIcon]
+  components: [NButton, NIcon, NInput]
 })
 createApp(App).use(naive).mount('#app')

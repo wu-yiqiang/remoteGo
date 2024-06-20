@@ -1,48 +1,62 @@
 <template>
   <section class="ConnectLists">
-   <div class="opts">
-    <n-button text>
-       <SvgIcon name="add" color="#ffff"  size="30px"/>  
-    </n-button>
-    <n-button text>
-       <SvgIcon name="fold" color="#ffff"  size="30px"/>  
-    </n-button>
-   </div>
-   <div class="items">
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接2</div>
-    <div class="item">连接1</div>
-    <div class="item">连接111112</div>
-   </div>
+    <div class="opts">
+      <n-button text style="font-size: 24px">
+        <n-icon>
+          <Add />
+        </n-icon>
+      </n-button>
+      <n-button text style="font-size: 24px">
+        <n-icon>
+          <Folder />
+        </n-icon>
+      </n-button>
+      <n-input placeholder="搜索">
+        <template #prefix>
+          <n-icon :component="FlashOutline" />
+        </template>
+      </n-input>
+         <n-button text style="font-size: 24px">
+        <n-icon>
+          <MenuOutline />
+        </n-icon>
+      </n-button>
+    </div>
+    <div class="items">
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接2</div>
+      <div class="item">连接1</div>
+      <div class="item">连接111112</div>
+    </div>
   </section>
 </template>
 <script lang="ts" setup>
 import { reactive, watch, computed, ref } from 'vue'
 import SvgIcon from '../../components/SvgIcon.vue'
-
+import { Add, Folder, FlashOutline, MenuOutline } from '@vicons/ionicons5'
 </script>
 <style scoped lang="scss">
-.ConnectLists{
+.ConnectLists {
   width: 260px;
   height: 100vh;
   border-right: 1px solid gray;

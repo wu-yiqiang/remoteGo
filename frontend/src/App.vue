@@ -14,5 +14,6 @@ import Content from './layout/Content/index.vue'
 <style scoped>
 .Layout {
   display: flex;
+  /* background-color: #fff; */
 }
 </style>
