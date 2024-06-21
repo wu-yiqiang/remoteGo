@@ -1,7 +1,7 @@
 <template>
   <section class="ConnectLists">
     <div class="opts">
-      <n-button text style="font-size: 24px">
+      <n-button text style="font-size: 24px" @click="handleAdd">
         <n-icon>
           <Add />
         </n-icon>
@@ -49,11 +49,17 @@
       <div class="item">连接111112</div>
     </div>
   </section>
+  <SettingDialog v-if="visible" v-model:visible="visible" />
 </template>
 <script lang="ts" setup>
 import { reactive, watch, computed, ref } from 'vue'
 import SvgIcon from '../../components/SvgIcon.vue'
+import SettingDialog from './setting-dialog.vue'
 import { Add, Folder, FlashOutline, MenuOutline } from '@vicons/ionicons5'
+let visible = ref<boolean>(false)
+const handleAdd = () => {
+  visible.value = true
+}
 </script>
 <style scoped lang="scss">
 .ConnectLists {
