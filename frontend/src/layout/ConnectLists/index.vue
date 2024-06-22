@@ -62,20 +62,21 @@ const handleAdd = () => {
 }
 </script>
 <style scoped lang="scss">
+$--opts-height: 50px;
 .ConnectLists {
   width: 260px;
   height: 100vh;
   border-right: 1px solid gray;
   .opts {
-    height: 60px;
-    padding: 0 10px;
+    height: $--opts-height;
+    padding:0 8px;
     display: flex;
     place-items: center;
     column-gap: 10px;
     border-bottom: 1px solid gray;
   }
   .items {
-    height: calc(100vh - 60px);
+    height: calc(100vh - $--opts-height);
     overflow-y: auto;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
@@ -84,7 +85,7 @@ const handleAdd = () => {
       height: 0;
     }
     .item {
-      padding: 10px;
+      padding: 6px;
       border-bottom: 1px solid gray;
       cursor: pointer;
     }
